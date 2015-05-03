@@ -5,20 +5,28 @@
 body {
     background-image: url("http://wallpaperlepi.com/wp-content/uploads/2015/01/Blue-logo-Twitter-Wallpaper-Wide.jpg");
 }
+p {
+    background-color: #3E798E/*#202C38*/;
+}
+.header-cont { width:100%; position:fixed; top:0px;}
 </style>
 </head>
 <body style= "color: white">
    <form action='/' method="post" name="myform" align ="center">
-      <div style="background-color: #202C38; color:white; padding:20px;">
+      <div class="header-cont">
+        <div style="background-color: #202C38; color:white; padding:20px;">
           <input type="text" style="font-size: 24pt; font-family:verdana; padding-left:10px;background-color: transparent; color: white" placeholder="--enter keyword--" name="keyword" size="35">
           <button type="submit" style="height: 7%; width:15%; font-family: verdana; font-size: 20pt; background-color: #2996B5; color: white" ><b>Search</b></button>
-          </div>
+        </div>
+      </div>
           <div><h3>
                <a href="/" style="font-family:verdana, serif; font-size: 20pt">Clear Result</a>
           </h3>
           
       </div>
   </form>
+   <br>
+   <br>
     <ol>
          {% for item in search_list %}
          
