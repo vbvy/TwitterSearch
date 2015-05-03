@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Twitter Search</title>
+<style>
+body {
+    background-image: url("http://wallpaperlepi.com/wp-content/uploads/2015/01/Blue-logo-Twitter-Wallpaper-Wide.jpg");
+}
+</style>
+</head>
+<body style= "color: white">
+   <form action='/' method="post" name="myform" align ="center">
+      <div style="background-color: #202C38; color:white; padding:20px;">
+          <input type="text" style="font-size: 24pt; font-family:verdana; padding-left:10px;background-color: transparent; color: white" placeholder="--enter keyword--" name="keyword" size="35">
+          <button type="submit" style="height: 7%; width:15%; font-family: verdana; font-size: 20pt; background-color: #2996B5; color: white" ><b>Search</b></button>
+          </div>
+          <div><h3>
+               <a href="/" style="font-family:verdana, serif; font-size: 20pt">Clear Result</a>
+          </h3>
+          
+      </div>
+  </form>
+    <ol>
+         {% for item in search_list %}
+         
+          <li><p style="font-size: 20pt; font-family:verdana">{{item}}</p></li>
+         {% endfor %}
+    </ol>
+</body>
+</html>
+
+ 
