@@ -12,7 +12,7 @@ access_token = '94486385-Od0OLc6UmvnAxnR7A5BhSiA9nzDwVzPHKC6PQD85u'
 access_token_secret = 'O9MV3M9OMBJAeHP2z5CeonjigBHue4PjafgLpcfLTKqZb'
 
 # search count
-count_limit=100
+count_limit=2
 
 
 
@@ -26,13 +26,16 @@ def twitter_search():
         if query_param=='':
             return render_template('index.html')
         search_results = api.search(q=query_param, count=count_limit)  #if auth are right, call gets successful
-        #print search_results
-        
+        print search_results
+        print "********************************************************"
         search_text=[]
+        profile_image=[]
         for i in search_results:
+            #profile_image.append(i.profile_image_url_https)           #profile image added
             search_text.append(i.text)
-        #print search_text
-        
+            #print profile_image
+            print search_text
+            print "************NEXT**************"
         return render_template('index.html',search_list=search_text)
     return render_template('index.html')
 
